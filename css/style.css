@@ -1,0 +1,127 @@
+* {
+    -webkit-box-sizing: border-box;
+       -moz-box-sizing: border-box;
+            box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+body {
+	font-family: 'Inconsolata', monospace;
+}
+
+a { text-decoration: none; }
+li { list-style-type: none; }
+
+.container {
+	width: 90%;
+	margin: 0 auto;
+}
+
+#home {
+	background-image: url('../images/backHome.jpg');
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center center;
+	background-attachment: fixed;
+	position: relative;
+	height: 100vh;
+
+}
+
+
+.fixed {
+	position: fixed !important;
+	width: 100% !important;
+	top: 0;
+	z-index: 99999;
+	box-shadow: 0 10px 10px rgba(0,0,0,0.2);
+}
+
+
+.fixed .container nav { 
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+#header {
+	background-color: #424242;
+	position: absolute;
+   	height: 50px;
+    bottom: 0;
+    width: 100%;
+	
+}
+
+
+#header  .container nav {
+	display: flex;
+	justify-content: center;
+    align-items: center;
+    height: 50px;
+
+}
+
+#header  .container nav ul {
+	display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
+#header  .container nav ul li {
+	display: block;
+    font-size: 18pt;
+    margin-right: 2%;
+}
+
+#header  .container nav ul li:hover a{
+	background-border: 1px solid white;
+	border-radius: 5px;
+	background: white;
+	color: orange;
+}
+
+#header  .container nav ul li a {
+	color: white;
+	padding-left: 5px;
+	padding-right: 5px;
+	
+}
+
+#home #redes-trabalho {
+	position: absolute;
+    margin-top: 2%;
+    display: flex;
+    width: 30%;
+}
+
+#home #redes-trabalho i {
+	font-size: 200%;
+	color: white;
+	margin-right: 4%;
+}
+
+#home #eu {
+	position: absolute;
+	text-align: center;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 30%;
+    color: white;
+}
+
+#home #eu .circle {
+	border-radius: 50%;
+	width: 3em;
+	height: 3em;
+	margin-bottom: 0.4%;
+	background-size: cover;
+	background-position: center;
+	background-image: url('../images/eu.jpg');
+} 
+
+
+

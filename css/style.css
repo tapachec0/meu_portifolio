@@ -7,7 +7,8 @@
 }
 
 body {
-	font-family: 'Inconsolata', monospace;
+	/*font-family: 'Inconsolata', monospace;*/
+	font-family: 'Cuprum', sans-serif;
 }
 
 a { text-decoration: none; }
@@ -18,17 +19,38 @@ li { list-style-type: none; }
 	margin: 0 auto;
 }
 
+/*------------------------------------*\
+  #HOME-SECTION
+\*------------------------------------*/
+
 #home {
-	background-image: url('../images/backHome.jpg');
+	background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('../images/backHome.jpg');
 	background-repeat: no-repeat;
 	background-size: cover;
 	background-position: center center;
 	background-attachment: fixed;
 	position: relative;
-	height: 100vh;
-
+	height: 110vh;
 }
 
+#home .welcome {
+	position: absolute;
+    margin-top: 50vh;
+    margin-left: 30%;
+    color: wheat;
+}
+
+#home .welcome #text { 
+	font-size: 42pt;
+	padding-right: 4px;
+	border-right: .12em solid wheat;
+	
+}
+
+@keyframes blink-caret {
+  from, to { border-color: transparent }
+  50% { border-color: wheat; }
+}
 
 .fixed {
 	position: fixed !important;
@@ -50,9 +72,7 @@ li { list-style-type: none; }
    	height: 50px;
     bottom: 0;
     width: 100%;
-	
 }
-
 
 #header  .container nav {
 	display: flex;
@@ -109,8 +129,8 @@ li { list-style-type: none; }
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    margin-top: 30%;
-    color: white;
+    margin-top: 80vh;
+    color: wheat;
 }
 
 #home #eu .circle {
@@ -124,4 +144,100 @@ li { list-style-type: none; }
 } 
 
 
+/*------------------------------------*\
+  #SOBRE-SECTION
+\*------------------------------------*/
 
+#sobre {
+	padding-top: 96px;
+	padding-bottom: 96px;
+}
+
+#sobre .container {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+
+#sobre .container p { 
+	font-size: 20pt;
+}
+
+
+#sobre .curriculo {
+	padding: 2%;
+	text-align: center;
+	color: red;
+	border: 4px solid red;
+	background-color: transparent;
+	width: 20%;
+	margin-top: 2%;
+}
+
+/*------------------------------------*\
+  #TRABALHOS-SECTION
+\*------------------------------------*/
+
+#trabalhos {
+	padding-bottom: 96px;
+	padding-top: 96px;
+}
+
+#trabalhos .trabalhos-secao {
+	display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+#trabalhos .trabalhos-secao .trabalho {
+	background-color: red;
+    border-radius: 5px;
+    width: 30%;
+    height: 15em;
+    margin-right: 2%;
+    margin-bottom: 2%;
+}
+
+#trabalhos .trabalhos-secao .trabalho:hover {
+	box-shadow: 1px 1px 10px 5px rgba(0,0,0,0.3)
+}
+
+/*------------------------------------*\
+  #RECOMENDACAO-SECTION
+\*------------------------------------*/
+
+#recomendacoes {
+	padding-top: 96px;
+	padding-bottom: 96px;
+	position: relative;
+}
+
+#recomendacoes .slick-prev, #recomendacoes .slick-next {
+    font-size: 10pt;
+}
+#recomendacoes .slick-prev i, #recomendacoes .slick-next i {
+	color: red;
+	font-size: 200%;
+}
+#recomendacoes .slick-prev {
+	left: 20px;
+}
+#recomendacoes .slick-next {
+	right: 20px;
+}
+
+#recomendacoes .recomendacao .mensagem {
+	margin-bottom: 2em;
+}
+
+
+/*------------------------------------*\
+  #FOOTER-SECTION
+\*------------------------------------*/
+
+footer {
+	background-color: red;
+	width: 100%;
+	height: 10vh;
+}

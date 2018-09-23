@@ -22,7 +22,7 @@ function typePalavra() {
 	if(indexLetraPalavra < text.length) {
 		document.getElementById('text').innerHTML += text.charAt(indexLetraPalavra);
 		indexLetraPalavra ++;
-		setTimeout(typePalavra, 145);
+		setTimeout(typePalavra, 120);
 	}
 
 	else {
@@ -47,6 +47,13 @@ function scrollSuave(){
 	});
 }
 
+function teste(){
+	$('.translate').click(function(){
+		$(".quadro").toggleClass("fixe");
+	});
+		
+
+}
 /*=============================================================
 | Plugin--> slick.js 
 |
@@ -77,4 +84,5 @@ window.addEventListener('load', function() {
 	typePalavra();
 	scrollSuave();
 	slider();
+	teste();
 });

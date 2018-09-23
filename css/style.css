@@ -24,7 +24,7 @@ li { list-style-type: none; }
 \*------------------------------------*/
 
 #home {
-	background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('../images/backHome.jpg');
+	background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('../images/frontend-dev.jpg');
 	background-repeat: no-repeat;
 	background-size: cover;
 	background-position: center center;
@@ -168,10 +168,11 @@ li { list-style-type: none; }
 #sobre .curriculo {
 	padding: 2%;
 	text-align: center;
-	color: red;
-	border: 4px solid red;
+	color: #424242;
+	border: 4px solid #424242;
 	background-color: transparent;
 	width: 20%;
+	font-size: 1em;
 	margin-top: 2%;
 }
 
@@ -183,7 +184,12 @@ li { list-style-type: none; }
 	padding-bottom: 96px;
 	padding-top: 96px;
 }
-
+#trabalhos h1 {
+	text-align: center;
+	color: #424242;
+	font-size: 4em;
+	margin-bottom: 1em;
+}
 #trabalhos .trabalhos-secao {
 	display: flex;
     justify-content: center;
@@ -191,16 +197,39 @@ li { list-style-type: none; }
 }
 
 #trabalhos .trabalhos-secao .trabalho {
-	background-color: red;
+	/*background-color: red;*/
     border-radius: 5px;
     width: 30%;
     height: 15em;
     margin-right: 2%;
     margin-bottom: 2%;
+    overflow: hidden; 
+}
+
+#trabalhos .trabalhos-secao .trabalho #imetac { background-image: url('../images/imetac.png'); }
+#trabalhos .trabalhos-secao .trabalho #construindo { background-image: url('../images/construindo.png'); }
+#trabalhos .trabalhos-secao .trabalho #joao { background-image: url('../images/joao.png'); }
+#trabalhos .trabalhos-secao .trabalho #uwe { background-image: url('../images/uwe.png'); }
+#trabalhos .trabalhos-secao .trabalho #waste-free { background-image: url('../images/waste-free.png'); }
+#trabalhos .trabalhos-secao .trabalho #mosby { background-image: url('../images/mosby.png'); }
+
+
+#trabalhos .trabalhos-secao .trabalho .image {
+	
+	background-position: center center;
+	background-repeat: no-repeat;
+	height: 100%;
+    width: 100%;
+	background-size: contain;
+	transition: all 3s;
+}
+#trabalhos .trabalhos-secao .trabalho .image:hover {
+	transform: scale(1.2);
 }
 
 #trabalhos .trabalhos-secao .trabalho:hover {
-	box-shadow: 1px 1px 10px 5px rgba(0,0,0,0.3)
+	box-shadow: 1px 1px 10px 5px rgba(0,0,0,0.3);
+	
 }
 
 /*------------------------------------*\
@@ -230,6 +259,7 @@ li { list-style-type: none; }
 #recomendacoes .recomendacao .mensagem {
 	margin-bottom: 2em;
 }
+
 
 
 /*------------------------------------*\

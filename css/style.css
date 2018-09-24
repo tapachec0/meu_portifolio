@@ -110,15 +110,19 @@ li { list-style-type: none; }
 
 #home #redes-trabalho {
 	position: absolute;
-    margin-top: 2%;
+    margin-top: 4%;
     display: flex;
     width: 30%;
 }
 
-#home #redes-trabalho i {
+
+#home #redes-trabalho ul { display: flex; }
+#home #redes-trabalho ul li { margin-right: 1em; }
+#home #redes-trabalho ul li:hover { margin-top: -1em; }
+#home #redes-trabalho ul li i {
 	font-size: 200%;
 	color: white;
-	margin-right: 4%;
+	
 }
 
 #home #eu {
@@ -221,10 +225,12 @@ li { list-style-type: none; }
 	height: 100%;
     width: 100%;
 	background-size: contain;
-	transition: all 3s;
+	transition: all 1s;
+
 }
 #trabalhos .trabalhos-secao .trabalho .image:hover {
 	transform: scale(1.2);
+	backface-visibility: hidden;
 }
 
 #trabalhos .trabalhos-secao .trabalho:hover {

@@ -2,7 +2,8 @@
     -webkit-box-sizing: border-box;
        -moz-box-sizing: border-box;
             box-sizing: border-box;
-    padding: 0;
+   padding: 0;
+   position: relative;
     margin: 0;
 }
 
@@ -201,13 +202,24 @@ li { list-style-type: none; }
 }
 
 #trabalhos .trabalhos-secao .trabalho {
-	/*background-color: red;*/
-    border-radius: 5px;
-    width: 30%;
-    height: 15em;
-    margin-right: 2%;
+	
+    
+    width: 33%;
+    height: 18em;
+    position: relative;
+    margin-right: 6%;
     margin-bottom: 2%;
-    overflow: hidden; 
+    /*overflow: hidden;*/ 
+    transform-style: preserve-3d;
+  	transition: all 1.0s linear;
+}
+
+#trabalhos .trabalhos-secao .trabalho:nth-child(even) {
+	margin-right: 0;
+}
+#trabalhos .trabalhos-secao .trabalho:hover {
+	transform: rotateY(180deg);
+  	box-shadow: -1px 1px 10px 5px rgba(0,0,0,0.3);
 }
 
 #trabalhos .trabalhos-secao .trabalho #imetac { background-image: url('../images/imetac.png'); }
@@ -225,18 +237,52 @@ li { list-style-type: none; }
 	height: 100%;
     width: 100%;
 	background-size: contain;
-	transition: all 1s;
+	position: absolute;
+	backface-visibility: hidden;
+	background-color: white;
+	/*transition: all 1s;*/
 
 }
-#trabalhos .trabalhos-secao .trabalho .image:hover {
+
+#trabalhos .trabalhos-secao .trabalho .back {
+  display: block;
+  transform: rotateY(180deg);
+  box-sizing: border-box;
+  padding: 10px;
+  height: 100%;
+  color: white;
+  text-align: center;
+  background-color: #aaa;
+}
+
+#trabalhos .trabalhos-secao .trabalho .back .title {
+	margin-bottom: 2em;
+	font-size: 1.2em;
+}
+
+#trabalhos .trabalhos-secao .trabalho .back .first-text {
+	margin-bottom: 1em;
+	line-height: 
+}
+#trabalhos .trabalhos-secao .trabalho .back  a {
+	text-decoration: underline;
+	color: black;
+	margin-right: 1.2em;
+	font-weight: bold;
+}
+#trabalhos .trabalhos-secao .trabalho .back .second-text {
+	margin-bottom: 4em;
+}
+
+/*#trabalhos .trabalhos-secao .trabalho .image:hover {
 	transform: scale(1.2);
 	backface-visibility: hidden;
-}
+}*/
 
-#trabalhos .trabalhos-secao .trabalho:hover {
+/*#trabalhos .trabalhos-secao .trabalho:hover {
 	box-shadow: 1px 1px 10px 5px rgba(0,0,0,0.3);
 	
-}
+}*/
 
 /*------------------------------------*\
   #RECOMENDACAO-SECTION
@@ -273,7 +319,17 @@ li { list-style-type: none; }
 \*------------------------------------*/
 
 footer {
-	background-color: red;
+	background-color: #424242;
 	width: 100%;
 	height: 10vh;
+	position: absolute;
+	bottom: 0;
+}
+
+footer .container {
+	display: flex;
+	margin-top: 1em;
+	color: white;
+	font-size: 15pt;
+	justify-content: space-around;
 }

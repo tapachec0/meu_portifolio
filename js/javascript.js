@@ -70,7 +70,8 @@ function slider() {
 		autoplaySpeed: 7000,
 		fade: true,
 		cssEase: 'linear',
-		arrows: true
+		arrows: true, 
+		draggable: true
 	});
 }
 

@@ -1,0 +1,91 @@
+@media(min-width: 1646px) {
+	#home .welcome { margin-left: 35%; }
+	#trabalhos .trabalhos-secao .trabalho {
+		margin-right: 10%;
+   		margin-bottom: 5%;
+	}
+
+}
+
+@media(min-width: 1450px){
+	 #sobre .curriculo {
+    	width: 40%;
+    	font-size: 2em;
+    }
+}
+@media(max-width: 1355px) {
+	#trabalhos .trabalhos-secao .trabalho { width: 43%; }
+
+   
+}
+
+@media(max-width: 1183px) {
+	#home .welcome { margin-left: 25%; }
+}
+@media(max-width: 1128px) {
+	#trabalhos .trabalhos-secao {
+		flex-direction: column;
+		align-items: center;
+	}
+
+	#trabalhos .trabalhos-secao .trabalho {
+    	margin-right: 0;
+    	width: 53%;
+	}
+
+
+}
+
+@media(max-width: 980px) {
+	#home .welcome { margin-left: 20%; }
+
+	#trabalhos .trabalhos-secao .trabalho { width: 63%; }
+}
+
+@media(max-width: 810px) {
+	#sobre .curriculo { width: 80%; }
+} 
+
+@media(max-width: 768px) {
+	#home .welcome { margin-left: 10%; }
+		#home .welcome h1 { font-size: 35pt !important; }
+	#trabalhos .trabalhos-secao .trabalho { width: 83%; }
+}
+
+@media(max-width: 580px) {
+	#home #header { display: none; }
+	#eu .referencia p { font-size: 10pt; }
+	#home .welcome h1 { font-size: 30pt !important; }
+	#sobre .container p { font-size: 18pt; }
+	#sobre .curriculo { margin-top: 8%; }
+	#trabalhos h1 { font-size: 2em; }
+	#recomendacoes .slick-prev, 
+	#recomendacoes .slick-next { display: none !important; }
+	footer .container {
+		flex-direction: column;
+		align-items: center;
+	}
+
+	footer p { margin-bottom: 2%; }
+
+}
+
+@media(max-width: 465px) {
+	#home .welcome h1 {
+    	font-size: 25pt !important;
+	}
+}
+
+@media(max-width: 420px) {
+	#home .welcome {
+		margin-left: 5% !important;
+	}
+}
+
+@media(max-width: 368px) {
+	#home .welcome {
+		margin-left: 2% !important;
+	}
+
+	footer { padding-bottom: 30px; }
+}

@@ -81,6 +81,12 @@ window.addEventListener('scroll', function() {
 	
 });
 
+window.addEventListener("orientationchange", function() {
+	if(window.orientation == 0){
+     	$("#header").removeClass("fixed");
+	}
+});
+
 window.addEventListener('load', function() {
 	typePalavra();
 	scrollSuave();

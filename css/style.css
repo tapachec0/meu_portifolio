@@ -67,11 +67,12 @@ li { list-style-type: none; }
 	justify-content: center;
 }
 #header {
-	background-color: wheat;
+	background-color: #424242;
 	position: absolute;
    	height: 50px;
     bottom: 0;
     width: 100%;
+    display: block;
 }
 
 #header  .container nav {
@@ -95,14 +96,14 @@ li { list-style-type: none; }
 }
 
 #header  .container nav ul li:hover a{
-	background-border: 1px solid white;
+	background-border: 1px solid wheat;
 	border-radius: 5px;
-	background: #424242;
-	color: wheat;
+	background: wheat;
+	color: #424242;
 }
 
 #header  .container nav ul li a {
-	color:#424242;
+	color:wheat;
 	padding-left: 5px;
 	padding-right: 5px;
 	
@@ -259,9 +260,10 @@ li { list-style-type: none; }
   box-sizing: border-box;
   padding: 10px;
   height: 100%;
+  backface-visibility: hidden;
   text-align: center;
-  background-color: wheat;
-  color: #424242;
+  background-color: #424242;
+  color: wheat;
 }
 
 #trabalhos .trabalhos-secao .trabalho .back .title {
@@ -275,9 +277,10 @@ li { list-style-type: none; }
 	
 }
 #trabalhos .trabalhos-secao .trabalho .back  a {
-	text-decoration: underline;
-	color: #424242;
+	
+	color: wheat;
 	margin-right: 1.2em;
+	margin-left: 1.2em;
 	font-weight: bold;
 }
 #trabalhos .trabalhos-secao .trabalho .back .second-text {
@@ -338,7 +341,7 @@ li { list-style-type: none; }
 \*------------------------------------*/
 
 footer {
-	background-color:wheat;
+	background-color:#424242;
 	width: 100%;
 	padding-top: 20px;
 	padding-bottom: 20px;
@@ -347,7 +350,7 @@ footer {
 footer .container {
 	display: flex;
 	margin-top: 1em;
-	color: #424242;
+	color: wheat;
 	font-size: 15pt;
 	justify-content: space-around;
 }

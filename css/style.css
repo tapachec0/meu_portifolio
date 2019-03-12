@@ -231,9 +231,14 @@ li { list-style-type: none; }
 	transform: rotateY(180deg);
   	box-shadow: -1px 1px 10px 5px rgba(0,0,0,0.3);
 }
+#trabalhos .trabalhos-secao .trabalho #tvde { background-image: url('../images/projects/tvde.jpg'); }
 
-#trabalhos .trabalhos-secao .trabalho #imetac { background-image: url('../images/projects/imetac.png'); }
+#trabalhos .trabalhos-secao .trabalho #artesanato { 
+	background-image: url('../images/projects/logo-laranja.png');
+	background-color: #424242;
+}
 #trabalhos .trabalhos-secao .trabalho #construindo { background-image: url('../images/projects/construindo.png'); }
+#trabalhos .trabalhos-secao .trabalho #pbjunior { background-image: url('../images/projects/logo_colorida.png'); }
 #trabalhos .trabalhos-secao .trabalho #joao { background-image: url('../images/projects/joao.png'); }
 #trabalhos .trabalhos-secao .trabalho #uwe { background-image: url('../images/projects/uwe.png'); }
 #trabalhos .trabalhos-secao .trabalho #waste-free { background-image: url('../images/projects/waste-free.png'); }

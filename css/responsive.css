@@ -63,11 +63,11 @@
 	}
 	.arrows { 
 		justify-content: center;
-		margin-top: 8px;
+		margin-top: 46px;
 	}
 	.prev { margin-right: 34px; }
 
-	#trabalhos { padding-bottom: 40px; }
+	#trabalhos { padding-bottom: 210px; }
 }
 
 @media(max-width: 810px) {
@@ -77,10 +77,24 @@
 	 }
 } 
 
+/*@media(max-height: 1280px) and (orientation: portrait) { 
+	#home { height: 57vh; }
+	#home .welcome { margin-left: 11%; margin-top: 23vh; }
+	#home #eu { margin-top: 39vh; }
+}*/
+
 @media(max-width: 768px) {
 	#home .welcome { margin-left: 10%; }
 		#home .welcome h1 { font-size: 35pt !important; }
 }
+
+
+@media(max-width: 640px) and (orientation: landscape) { 
+	#home { height: 140vh; }
+	#home #eu { margin-top: 85vh; }
+}
+
+
 
 @media(max-width: 580px) {
 	

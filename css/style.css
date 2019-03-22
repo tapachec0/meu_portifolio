@@ -169,8 +169,8 @@ li { list-style-type: none; }
 \*------------------------------------*/
 
 #sobre {
-	padding-top: 40px;
-	padding-bottom: 40px;
+	padding-top: 96px;
+	padding-bottom: 96px;
 }
 
 #sobre .container {
@@ -211,8 +211,8 @@ li { list-style-type: none; }
 \*------------------------------------*/
 
 #trabalhos {
-	padding-bottom: 200px;
-	padding-top: 40px;
+	padding-bottom: 300px;
+	padding-top: 96px;
 
 }
 
@@ -360,7 +360,7 @@ li { list-style-type: none; }
 
 #recomendacoes {
 	padding-top: 96px;
-	padding-bottom: 96px;
+	padding-bottom: 60px;
 	position: relative;
 }
 
@@ -402,6 +402,9 @@ li { list-style-type: none; }
   #TECNOLOGIAS-SECTION
 \*------------------------------------*/
 
+.tecnologias {
+	padding-bottom: 60px; 
+}
 .tecnologias .container {
 	display: flex;
 	align-items: center;

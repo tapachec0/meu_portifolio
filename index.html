@@ -5,21 +5,38 @@
  		<meta name="viewport" content="width=device-width, initial-scale = 1">
 		<meta charset="utf-8">
 		<title>Talyta Pacheco</title>
+		<meta name="description" content="Portfolio de Talyta Pacheco, mostrando projetos que trablahou, bem como tecnologias e indicações.">
+		<meta name="keywords" content="Talyta Pacheco,Portfolio,Developer, Dev, CITi,HTML,CSS,JavaScript,Django, Front-End, Desenvolvedor Front-end, Site de desenvolvedor">
+		<meta name="author" content="Talyta Pacheco">
+
+		<!--Icones do Ionic para usar nas redes de trabalho-->
 		<link rel="stylesheet" type="text/css" href="http://code.ionicframework.com/ionicons/1.5.2/css/ionicons.min.css">
+
+		<!--Arquivos css principais-->
 		<link rel="stylesheet" href="css/style.css">
 		<link rel="stylesheet" href="css/responsive.css">
+
+		<!--Arquivos de animação-->
+		<link rel="stylesheet" href="css/animate.css">
 
 		 <meta name="theme-color" content="wheat" />
 		 <link rel="icon" href="images/tp_aba.png">
 		
+		<!--Fonte-->
 		<link href="https://fonts.googleapis.com/css?family=Cuprum" rel="stylesheet">
+
+		<!--Arquivos css do Slick-->
 		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.css">
-		<!--Add the new slick-theme.css if you want the default styling-->
 		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.css">
 		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick-theme.css">
 	</head>
 	<body>
 
+		<!--
+			#############
+				HOME
+			#############
+		-->
 		<section id="home">
 			
 			<div id="teste"> 
@@ -62,11 +79,14 @@
 				</div>
 			</div>
 
-			
-			
-		</section>
-
-		<!--Mobile-->
+	</section>
+	
+	<!--
+		##################
+			Menu Mobile
+		##################
+	-->
+		
 		<div class="icone-hamburguer">
 			<div class="container">
 				<div class="menu-movel">
@@ -86,21 +106,32 @@
 		</section>
 
 
-		<section id="sobre">
+		<!--
+			#############
+				SOBRE
+			#############
+		-->
+
+		<section id="sobre" class="wow zoomIn" data-wow-duration='2s'>
 			<div class="container">
 				
 				
 				<p>Sou Talyta Pacheco, natural de Recife-PE. Tenho 19 anos, atuo no desenvolvimento front-end de WebSites, e comecei a me aventurar
 				no back-end. Meu principal objetivo é fazer qualquer projeto como Sênior sendo Júnior.
 				</p>
-				<a href="images/Curriculo_Talyta.pdf" class="curriculo" target="_blank">Meu Currículo</a>
+				<a href="images/Talyta_Pacheco.pdf" class="curriculo" target="_blank">Meu Currículo</a>
 					
 			</div>
 		</section>
 
-	
 
-		<section id="trabalhos">
+		<!--
+			################
+				TRABALHOS
+			################
+		-->
+
+		<section id="trabalhos" class="wow pulse" data-wow-duration='2s' data-wow-delay='1s'>
 			<div class="container">
 				<h1>Alguns projetos que colaborei no desenvolvimento</h1>
 				<div class="trabalhos-secao">
@@ -116,7 +147,7 @@
 
 						</div>
 
-						<div class="trabalho"> 
+						<div class="trabalho" style="background-color:#424242"> 
 							<div class="logo-projeto" style="background-image: url('images/projects/logo-laranja.png'); background-color: #424242;"></div>
 							<div class="back-descricao">
 								<p class="title">Artesanato Intelectual</p>
@@ -215,10 +246,15 @@
 					</div>
 			</div>
 		</section>
-
-	<section class="tecnologias">
+	
+	<!--
+		################
+			TECNOLOGIAS
+		################
+	-->
+	<section class="tecnologias" >
 		<div class="container">
-			<div class="box">
+			<div class="box wow pulse">
 				<div class="titulo-box">
 					<p id="titulo-p">Tecnologias que tive experiência</p>
 				</div>
@@ -257,11 +293,11 @@
 			
 			</div>
 			
-			<div class="box">
+			<div class="box wow pulse">
 				<div class="titulo-box aprendendo">
 					<p id="titulo-p">Tecnologias que estou aprendendo</p>
 				</div>
-				<div class="box-tecnologias tecnologias-aprendendo">
+				<div class="box-tecnologias tecnologias-aprendendo ">
 					<div class="logo-tecnologia">
 						<img class="imagem" src="images/tecnologias/react.svg">
 					</div>
@@ -274,7 +310,12 @@
 		</div>
 	</section>
 
-		<section id="recomendacoes">
+	<!--
+		###################
+			RECOMENDAÇÕES
+		###################
+	-->
+		<section id="recomendacoes" class="wow pulse">
 			<div class="container">
 				<h1>O que falam sobre mim?</h1>
 				<a class="slick-prev"><i class="ion-android-arrow-dropleft-circle"></i></a>	
@@ -299,7 +340,11 @@
   		</section>
   		
   		
-
+		<!--
+			################
+				FOOTER
+			################
+		-->
   		<footer>
   			<div class="container">
 
@@ -319,7 +364,19 @@
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 		<script type="text/javascript" src="js/slick.min.js"></script>
 		<script src="js/javascript.js"></script>
-
+		<script src="js/wow.min.js"></script>
+		<script>
+			wow = new WOW(
+				{
+					boxClass:     'wow',      // default
+					animateClass: 'animated', // default
+					offset:       0,          // default
+					mobile:       true,       // default
+					live:         true        // default
+				}
+			)
+            wow.init();
+		</script>
 		
 
 	</body>

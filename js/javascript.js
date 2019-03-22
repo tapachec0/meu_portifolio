@@ -1,17 +1,19 @@
+
+/*--------------------------------------------- FIXAR HEADER ON SCROLL ---------------------------------------------*/
 let distanciaTopHeader = $("#header").offset().top; //posição do topo inicial do objeto
 let fixo = false
 /* Função para verificar se a posição do topo da window é maior do que a do objeto.Se sim, o
 cabeçalho fica com posicao fixa e no topo. Caso contrário, o topo da window é menor, então 
 há conteudo acima e volta ao normal*/
 function fixarHeader() {
+	
 	console.log('header',distanciaTopHeader);
 	console.log('window',$(window).scrollTop());
+	console.log('home',$("#home").offset().top);
 	
 	if($(window).scrollTop() >= distanciaTopHeader) {
 		$("#header").addClass("fixed");
-		console.log('rntrou')
-		console.log()
-		console.log('window',$(window).scrollTop());
+		
 	}
 
 	else {
@@ -24,6 +26,7 @@ function fixarHeader() {
 	}
 }
 
+/*---------------------------------------------EFEITO DE ESCREVER(HOME) ---------------------------------------------*/
 var indexLetraPalavra = 0;
 var text = document.getElementById('text').innerText;
 document.getElementById('text').innerText = ""
@@ -42,6 +45,7 @@ function typePalavra() {
 
 }
 
+/*--------------------------------------------- MENU MOBILE ---------------------------------------------*/
 var ativo = false
 $('.icone-hamburguer').click(function(){
 	if(ativo === false){
@@ -66,6 +70,8 @@ $('.menu-mobile a').click(function(){
 });
 
 
+/*--------------------------------------------- SCROLL SUAVE ---------------------------------------------*/
+
 /* Função aprendida no curso de scrollSuave no vídeo gratuito disponibilizado no Youtube pelo
 canal Origamid */
 function scrollSuave(){
@@ -86,9 +92,10 @@ function teste(){
 	$('.translate').click(function(){
 		$(".quadro").toggleClass("fixe");
 	});
-		
-
 }
+
+/*--------------------------------------------- SLICK ---------------------------------------------*/
+
 /*=============================================================
 | Plugin--> slick.js 
 |
@@ -140,17 +147,19 @@ function slider() {
 	});
 }
 
+/*--------------------------------------------- CHAMADA DAS FUNÇÕES ---------------------------------------------*/
+
 //Função que controla o scroll
 window.addEventListener('scroll', function() {
 	fixarHeader();
 	
 });
 
-window.addEventListener('resize', function() {
-	distanciaTopHeader =  $("#header").offset().top;
+/*window.addEventListener('resize', function() {
+	distanciaTopHeader =  $(window).scrollTop() -  $("#header").offset().top;
 	console.log(distanciaTopHeader)
 	
-});
+});*/
 
 window.addEventListener("orientationchange", function() {
 	if(window.orientation == 0){
@@ -163,4 +172,5 @@ window.addEventListener('load', function() {
 	scrollSuave();
 	slider();
 	teste();
+	
 });

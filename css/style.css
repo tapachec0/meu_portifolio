@@ -598,6 +598,8 @@ footer .container {
 	transition: .25s .1s cubic-bezier(0, 1.07, 0, 1.02);
 	z-index: 2;
 	height: 100%;
+	visibility: hidden;
+	
 }
 
 .menu-mobile nav {

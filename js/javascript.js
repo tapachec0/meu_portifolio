@@ -24,13 +24,13 @@ $('.menu-animado').click(function(){
 	if(ativo === false){
 		$('#hamburguer').addClass('ativo');
 		$('.menu-mobile').css("opacity","1");
-		
+		$('.menu-mobile').css("visibility","visible");
 		$('.menu-animado').css("box-shadow","0 0 0 130vw wheat, 0 0 0 130vw wheat");
 		ativo = true
 	}
 	else {
 		$('#hamburguer').removeClass('ativo');
-		
+		$('.menu-mobile').css("visibility","hidden");
 		$('.menu-animado').css("box-shadow","0 0 0 0 wheat, 0 0 0 0 wheat");
 		$('.menu-mobile').css("opacity","0");
 		ativo = false
@@ -42,12 +42,14 @@ $('.menu-mobile a').click(function(){
 	if(ativo === true){
 		$('#hamburguer').removeClass('ativo');
 		$('.menu-animado').css("box-shadow","0 0 0 0 wheat, 0 0 0 0 wheat");
+		$('.menu-mobile').css("visibility","hidden");
 		$('.menu-mobile').css("opacity","0");
 		
 		ativo = false;
 	}
 	else {
 		$('.menu-mobile').css("opacity","1");
+		$('.menu-mobile').css("visibility","visible");
 		
 	}
 	

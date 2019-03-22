@@ -1,35 +1,14 @@
 @media(min-width: 1646px) {
 	#home .welcome { margin-left: 35%; }
-	#trabalhos .trabalhos-secao .trabalho {
-		margin-right: 10%;
-   		margin-bottom: 5%;
-	}
+	
 
-}
-
-
-@media(max-width: 1355px) {
-	#trabalhos .trabalhos-secao .trabalho { width: 43%; }
-
-   
 }
 
 @media(max-width: 1183px) {
 	#home .welcome { margin-left: 25%; }
 }
-@media(max-width: 1128px) {
-	#trabalhos .trabalhos-secao {
-		flex-direction: column;
-		align-items: center;
-	}
-
-	#trabalhos .trabalhos-secao .trabalho {
-    	margin-right: 0;
-    	width: 53%;
-	}
 
 
-}
 
 @media(max-width: 1086px){
 	 #sobre .curriculo {
@@ -38,35 +17,82 @@
     }
 }
 
+@media(max-width: 1024px) {
+	.box-tecnologias { justify-content: center; }
+	.logo-tecnologia { margin-right: 10px; margin-bottom: 10px; }
+}
+
 @media(max-width: 980px) {
 	#home .welcome { margin-left: 20%; }
 
-	#trabalhos .trabalhos-secao .trabalho { width: 63%; }
+}
+
+@media(max-width: 950px) {
+	#trabalhos .slick-list { 
+		width: 90% !important;
+		padding: 50px 0!important;
+		height: 315px;
+	}
+	#trabalhos .slick-slide { 
+		margin-right: 13px;
+		margin-bottom: 39px;
+		opacity: 0.9;
+		
+	}
+
+	#trabalhos .slick-slide:before {
+		background: rgba(0,0,0,0.7);
+		content: "";
+		position: absolute;
+		width: 100%;
+		height: 100%;
+		top: 0;
+		bottom: 0;
+		opacity: 0;
+		transition: 0.3s all ease-out;
+	}
+
+	#trabalhos .slick-slide:hover:before { 
+		opacity: 1;
+	  top: 0px;
+	}
+	
+	#trabalhos .slick-slide:hover .back-descricao { 
+		top: 0;
+		padding: 10px;
+	}
+	.arrows { 
+		justify-content: center;
+		margin-top: 8px;
+	}
+	.prev { margin-right: 34px; }
+
+	#trabalhos { padding-bottom: 40px; }
 }
 
 @media(max-width: 810px) {
 	#sobre .curriculo { 
 		width: 40%;
-    		padding: 4%;
+    padding: 4%;
 	 }
 } 
 
 @media(max-width: 768px) {
 	#home .welcome { margin-left: 10%; }
 		#home .welcome h1 { font-size: 35pt !important; }
-	#trabalhos .trabalhos-secao .trabalho { width: 83%; }
 }
 
 @media(max-width: 580px) {
-	#home #header,
-	#home .fixed { display: none; }
+	
+	#header ul { display: none !important; }
+	.icone-hamburguer { display: flex;}
 	#eu .referencia p { font-size: 10pt; }
 	#home .welcome h1 { font-size: 30pt !important; }
 	#sobre .container p { font-size: 18pt; }
 	#sobre .curriculo { 
 		margin-top: 8%;
 		width: 50%;
-    		padding: 5%;
+    padding: 5%;
 	 }
 	#trabalhos h1 { font-size: 2em; }
 	#recomendacoes .slick-prev, 
@@ -75,16 +101,11 @@
 		flex-direction: column;
 		align-items: center;
 	}
-
-	footer p { margin-bottom: 2%; }
+	footer .container > div { margin-bottom: 10px; }
+	footer .container div:last-child { margin-bottom: 0; }
 
 }
 
-@media(max-width: 500px) {
-	#trabalhos .trabalhos-secao .trabalho {
-		width: 100%;
-	}
-}
 
 @media(max-width: 465px) {
 	#home .welcome h1 {
@@ -93,27 +114,37 @@
 }
 
 @media(max-width: 420px) {
-	#home .welcome {
-		margin-left: 5% !important;
-	}
+	#home .welcome { margin-left: 31px; }
 
 	#sobre .curriculo {
 		margin-top: 9%;
-    	width: 60% !important;
-    	padding: 6% !important;
+		width: 60% !important;
+		padding: 6% !important;
 	}
+}
+@media(max-width: 396px) {
+	#home .welcome { margin-left: 10px; }
+}
+@media(max-width: 360px) {
+	#home .welcome h1 {
+    	font-size: 20pt !important;
+	}
+	#home .welcome { margin-left: 34px; }
 }
 @media(max-width: 350px) {
 	#sobre .curriculo {
 		margin-top: 9%;
-    	width: 70% !important;
-    	padding: 7% !important;
+		width: 70% !important;
+		padding: 7% !important;
 	}
 }
-@media(max-width: 368px) {
-	#home .welcome {
-		margin-left: 2% !important;
-	}
 
-	footer { padding-bottom: 30px; }
+@media(max-width: 365px) {
+	.box-tecnologias { justify-content: space-between; }
+	.logo-tecnologia:last-child { margin-right: 10px; }
+}
+
+
+@media(max-width: 320px) {
+	#home .welcome { margin-left: 25px; }
 }

@@ -8,20 +8,26 @@
 		<link rel="stylesheet" type="text/css" href="http://code.ionicframework.com/ionicons/1.5.2/css/ionicons.min.css">
 		<link rel="stylesheet" href="css/style.css">
 		<link rel="stylesheet" href="css/responsive.css">
+
+		 <meta name="theme-color" content="wheat" />
+		 <link rel="icon" href="images/tp_aba.png">
 		
 		<link href="https://fonts.googleapis.com/css?family=Cuprum" rel="stylesheet">
-		<link rel="stylesheet" href="css/slick.css"/>
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.css">
 		<!--Add the new slick-theme.css if you want the default styling-->
-		<link rel="stylesheet" href="css/slick-theme.css"/>
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.css">
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick-theme.css">
 	</head>
 	<body>
 
-		<div id="home">
+		<section id="home">
 			
-			<div class="welcome">
-				<h1 id="text">&lth1&gt Seja Bem-Vindo! &lt/h1&gt</h1>
-				
+			<div id="teste"> 
+				<div class="welcome">
+					<h1 id="text">&lth1&gt Seja Bem-Vindo! &lt/h1&gt</h1>
+				</div>
 			</div>
+			
 			<div id ="redes-trabalho">
 				<div class="container">
 					<ul>
@@ -58,28 +64,50 @@
 
 			
 			
-		</div>
+		</section>
 
-		<div id="sobre">
+		<!--Mobile-->
+		<div class="icone-hamburguer">
 			<div class="container">
-
-				<p>Sou Talyta Pacheco, tenho 19 anos e nasci em Recife-PE. Sou graduanda do curso de Sistemas de Informação.
-				 Atualmente, atuo no desenvolvimento front-end de WebSites, e comecei a me aventurar no back-end. Meu objetivo é fazer 
-				 qualquer projeto como Sênior sendo Júnior.
-				 </p>
-				<a href="images/TalytaPacheco%20.pdf" class="curriculo" target="_blank">Meu Currículo</a>
-				
+				<div class="menu-movel">
+					<span id="hamburguer"></span>
+				</div>
 			</div>
-		</div>
+    	</div>
 
-		<div id="trabalhos">
+		<section class="menu-mobile">
+			<nav>
+				<ul>
+					<li><a href="#home" aria-haspopup = "true"  id="link">Home</a></li>
+					<li><a href="#caracteristicas-servicos" aria-haspopup = "true" id="link">Características</a></li>
+					<li><a href="#planos" aria-haspopup = "true" id="link">Planos</a></li>
+					</ul>
+			</nav>
+		</section>
+
+
+		<section id="sobre">
+			<div class="container">
+				
+				
+				<p>Sou Talyta Pacheco, natural de Recife-PE. Tenho 19 anos, atuo no desenvolvimento front-end de WebSites, e comecei a me aventurar
+				no back-end. Meu principal objetivo é fazer qualquer projeto como Sênior sendo Júnior.
+				</p>
+				<a href="images/Curriculo_Talyta.pdf" class="curriculo" target="_blank">Meu Currículo</a>
+					
+			</div>
+		</section>
+
+	
+
+		<section id="trabalhos">
 			<div class="container">
 				<h1>Alguns projetos que colaborei no desenvolvimento</h1>
 				<div class="trabalhos-secao">
 
-						<div class="trabalho">
-							<div class="front image" id="tvde"></div>
-							<div class="back description">
+						<div class="trabalho" >
+							<div class="logo-projeto" style="background-image: url('images/projects/tvde.png')"></div>
+							<div class="back-descricao">
 								<p class="title">TVDE System</p>
 								<p class="first-text">Blog desenvolvido para uma empresa de Portugal.</p>
 								<p class="second-text">Desenvolvido na empresa Mangue Tecnologia</p>
@@ -88,11 +116,11 @@
 
 						</div>
 
-						<div class="trabalho">
-							<div class="front image" id="artesanato"></div>
-							<div class="back description">
+						<div class="trabalho"> 
+							<div class="logo-projeto" style="background-image: url('images/projects/logo-laranja.png'); background-color: #424242;"></div>
+							<div class="back-descricao">
 								<p class="title">Artesanato Intelectual</p>
-								<p class="first-text">Blog desenvolvido para um professor de Socialogia</p>
+								<p class="first-text">Blog desenvolvido para um professor de Sociologia</p>
 								<p class="second-text">Em desenvolvimento de forma freelancer</p>
 								<i class="ion-ios7-arrow-left"></i><a href="https://artesanato-intelectual.herokuapp.com/" target="_blank">Visitar Site</a><i class="ion-ios7-arrow-right"></i>
 							</div>
@@ -100,8 +128,8 @@
 						</div>
 
 						<div class="trabalho">
-							<div class="front image" id="pbjunior"></div>
-							<div class="back description">
+							<div class="logo-projeto" style="background-image: url('images/projects/logo_colorida.png');"></div>
+							<div class="back-descricao">
 								<p class="title">Federação Junior da Paraíba</p>
 								<p class="first-text">Site desenvolvido no programa de treinamento da empresa junior da UFPE, CITi</p>
 								<p class="second-text">Participei no desenvolvimento do mockup e como desenvolvedora</p>
@@ -112,8 +140,8 @@
 					
 
 						<div class="trabalho">
-							<div class="front image" id="construindo"></div>
-							<div class="back description">
+							<div class="logo-projeto" style="background-image: url('images/projects/construindo.png');"></div>
+							<div class="back-descricao">
 								<p class="title">Lojas Construindo</p>
 								<p class="first-text">Site desenvolvido para a empresa pernambucana de revenda de materiais de construção</p>
 								<p class="second-text">Desenvolvido na empresa Mangue Tecnologia</p>
@@ -125,8 +153,8 @@
 
 					
 						<div class="trabalho">
-							<div class="front image" id="joao"></div>
-							<div class="back description">
+							<div class="logo-projeto" style="background-image: url('images/projects/joao.png');"></div>
+							<div class="back-descricao">
 								<p class="title">João da Areia</p>
 								<p class="first-text">Site desenvolvido para a empresa pernambucana de comercialização de areia, brita e outros</p>
 								<p class="second-text">Desenvolvido na empresa Mangue Tecnologia</p>
@@ -138,10 +166,10 @@
 
 					
 						<div class="trabalho">
-							<div class="front image" id="uwe"></div>
-							<div class="back description">
+							<div class="logo-projeto" style="background-image: url('images/projects/uwe.png');"></div>
+							<div class="back-descricao">
 								<p class="title">UWE</p>
-								<p class="first-text">Aplicativo desenvolvido para sistemas Android, na plataforma de desenvolvimento Android Studio. Tem como objetivo resolver problemas de crimes ambientais.</p>
+								<p class="first-text">Aplicativo desenvolvido para sistemas Android. Tem como objetivo resolver problemas de crimes ambientais.</p>
 								<p class="second-text">Submetido à competição internacional Technovation Challenge.<br><a href="https://technovationchallenge.org/about/">Sobre o Technovation</a></br></p>
 								<i class="ion-ios7-arrow-left"></i><a href="https://www.youtube.com/watch?v=uFd8wladFd8" target="_blank">Vídeo Demo</a><i class="ion-ios7-arrow-right"></i><br>
 								<i class="ion-ios7-arrow-left"></i><a href="https://www.youtube.com/watch?v=AonjZXplSbQ" target="_blank">Vídeo Apresentação</a><i class="ion-ios7-arrow-right"></i></br>
@@ -152,10 +180,10 @@
 
 					
 						<div class="trabalho">
-							<div class="front image" id="waste-free"></div>
-							<div class="back description">
+							<div class="logo-projeto" style="background-image: url('images/projects/waste-free.png');"></div>
+							<div class="back-descricao">
 								<p class="title">Waste-Free</p>
-								<p class="first-text">Aplicativo desenvolvido na plataforma de desenvolvimento de protótipos AppInventor, com programção em blocos. Tem como objetivo resolver o desperdício de alimentos.</p>
+								<p class="first-text">Aplicativo desenvolvido na plataforma de desenvolvimento de protótipos AppInventor. Tem como objetivo resolver o desperdício de alimentos.</p>
 								<p class="second-text">Submetido à competição internacional Technovation Challenge.<br><a href="https://technovationchallenge.org/about/">Sobre o Technovation</a></br></p>
 								<i class="ion-ios7-arrow-left"></i><a href="https://www.youtube.com/watch?v=tZgfpRZg9KM&t=23s" target="_blank">Vídeo Demo</a><i class="ion-ios7-arrow-right"></i>
 							</div>
@@ -165,8 +193,8 @@
 
 					
 						<div class="trabalho">
-							<div class="front image" id="mosby"></div>
-							<div class="back description">
+							<div class="logo-projeto" style="background-image: url('images/projects/mosby.png');"></div>
+							<div class="back-descricao">
 								<p class="title">Mosby</p>
 								<p class="first-text">Jogo desenvolvido na plataforma de desenvolvimento Unity.</p>
 								<p class="second-text">Submetido à competição SBGames<br><a href="https://www.sbgames.org/">Sobre o SBGames</a></br></p>
@@ -176,11 +204,79 @@
 						</div>
 					</div>
 					
-			</div>
-		</div>
+					<div class="arrows">
+						<div class="arrow">
+							<div class="prev"><img src="images/back.svg"></div>
+						</div>
 
-		<div id="recomendacoes">
+						<div class="arrow">
+							<div class="next"><img src="images/next.svg"></div>
+						</div>  
+					</div>
+			</div>
+		</section>
+
+	<section class="tecnologias">
+		<div class="container">
+			<div class="box">
+				<div class="titulo-box">
+					<p id="titulo-p">Tecnologias que tive experiência</p>
+				</div>
+				<div class="box-tecnologias">
+					<div class="logo-tecnologia">
+						<img class="imagem" src="images/tecnologias/python.svg">
+					</div>
+					<div class="logo-tecnologia">
+						<img class="imagem" src="images/tecnologias/django.png">
+					</div>
+					<div class="logo-tecnologia">
+						<img class="imagem" src="images/tecnologias/html-5.svg">
+					</div>
+					<div class="logo-tecnologia">
+						<img class="imagem" src="images/tecnologias/javascript.svg">
+					</div>
+					<div class="logo-tecnologia">
+						<img class="imagem" src="images/tecnologias/css-3.svg">
+					</div>
+					<div class="logo-tecnologia">
+						<img class="imagem" src="images/tecnologias/c.png">
+					</div>
+					<div class="logo-tecnologia">
+						<img class="imagem" src="images/tecnologias/github.svg">
+					</div>
+					<div class="logo-tecnologia">
+						<img class="imagem" src="images/tecnologias/heroku.svg">
+					</div>
+					<div class="logo-tecnologia">
+						<img class="imagem" src="images/tecnologias/android.jpg">
+					</div>
+					<div class="logo-tecnologia">
+						<img class="imagem" src="images/tecnologias/experience.svg">
+					</div>
+				</div>
+			
+			</div>
+			
+			<div class="box">
+				<div class="titulo-box aprendendo">
+					<p id="titulo-p">Tecnologias que estou aprendendo</p>
+				</div>
+				<div class="box-tecnologias tecnologias-aprendendo">
+					<div class="logo-tecnologia">
+						<img class="imagem" src="images/tecnologias/react.svg">
+					</div>
+					<div class="logo-tecnologia">
+						<img class="imagem" src="images/tecnologias/nodejs.svg">
+					</div>
+				</div>
+			</div>
+			
+		</div>
+	</section>
+
+		<section id="recomendacoes">
 			<div class="container">
+				<h1>O que falam sobre mim?</h1>
 				<a class="slick-prev"><i class="ion-android-arrow-dropleft-circle"></i></a>	
 				<div class="slider">
 		    		<div class="recomendacao">
@@ -200,16 +296,17 @@
     			<a class="slick-next"><i class="ion-android-arrow-dropright-circle"></i></a>
     		</div>
 
-  		</div>
+  		</section>
   		
   		
 
   		<footer>
   			<div class="container">
 
-  				<p>Talyta Pacheco</p>
+  				<div><p>Talyta Pacheco</p></div>
+				<div><p>(81)9.9908-8941</p></div>
   				<!-- Copyright-->
-				&copy; 2018
+				<div>&copy; 2019</div>
   			</div>
   		</footer>
 
@@ -218,10 +315,6 @@
 				<p>English</p>
 		</a>
 		  -->
-
-
-
-
 
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 		<script type="text/javascript" src="js/slick.min.js"></script>

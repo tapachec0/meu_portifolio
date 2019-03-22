@@ -1,15 +1,26 @@
-var distanciaTopHeader = $("#header").offset().top; //posição do topo inicial do objeto
-
+let distanciaTopHeader = $("#header").offset().top; //posição do topo inicial do objeto
+let fixo = false
 /* Função para verificar se a posição do topo da window é maior do que a do objeto.Se sim, o
 cabeçalho fica com posicao fixa e no topo. Caso contrário, o topo da window é menor, então 
 há conteudo acima e volta ao normal*/
 function fixarHeader() {
+	console.log('header',distanciaTopHeader);
+	console.log('window',$(window).scrollTop());
+	
 	if($(window).scrollTop() >= distanciaTopHeader) {
 		$("#header").addClass("fixed");
+		console.log('rntrou')
+		console.log()
+		console.log('window',$(window).scrollTop());
 	}
 
 	else {
-		$("#header").removeClass("fixed");
+		console.log()
+		if($("#header").hasClass('fixed')){
+			$("#header").removeClass("fixed");	
+		}
+		
+		
 	}
 }
 
@@ -30,6 +41,30 @@ function typePalavra() {
 	}
 
 }
+
+var ativo = false
+$('.icone-hamburguer').click(function(){
+	if(ativo === false){
+		$('#hamburguer').addClass('ativo');
+		ativo = true
+	}
+	else {
+		$('#hamburguer').removeClass('ativo');
+		ativo = false
+	}
+	$('.menu-mobile').fadeToggle( "slow", "linear" );
+});
+
+$('.menu-mobile a').click(function(){
+	if(ativo === true){
+		$('#hamburguer').removeClass('ativo');
+		ativo = false;
+	}
+	
+	$('.menu-mobile').fadeToggle( "slow", "linear" );
+	
+});
+
 
 /* Função aprendida no curso de scrollSuave no vídeo gratuito disponibilizado no Youtube pelo
 canal Origamid */
@@ -73,11 +108,47 @@ function slider() {
 		arrows: true, 
 		draggable: true
 	});
+
+	$('.trabalhos-secao').slick({
+		prevArrow: $(".prev"),
+		nextArrow: $(".next"),
+		dots: false,
+		autoplaySpeed: 7000,
+		slidesToShow: 3,
+		slidesToScroll: 1,
+		centerMode: true,
+		variableWidth: true,
+		variableHeight: true,
+		responsive: [
+			{
+			  breakpoint: 951,
+			  settings: {
+				arrows: true,
+				centerMode: false,
+				slidesToShow: 2,
+				slidesToScroll: 2,
+				variableWidth: false,
+				variableHeight: false,
+				dots: false,
+				infinite:true,
+				
+	
+			  }
+			}
+		]
+		
+	});
 }
 
 //Função que controla o scroll
 window.addEventListener('scroll', function() {
 	fixarHeader();
+	
+});
+
+window.addEventListener('resize', function() {
+	distanciaTopHeader =  $("#header").offset().top;
+	console.log(distanciaTopHeader)
 	
 });
 

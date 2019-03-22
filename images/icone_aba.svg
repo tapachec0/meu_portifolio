@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="68" height="65" viewBox="0 0 68 65">
+  <g id="Agrupar_1" data-name="Agrupar 1" transform="translate(-235 -71)">
+    <g id="Elipse_1" data-name="Elipse 1" transform="translate(235 71)" fill="#424242" stroke="#424242" stroke-width="1">
+      <ellipse cx="34" cy="32.5" rx="34" ry="32.5" stroke="none"/>
+      <ellipse cx="34" cy="32.5" rx="33.5" ry="32" fill="none"/>
+    </g>
+    <text id="TP" transform="translate(249 127)" fill="#ffdcbc" font-size="42" font-family="ArialMT, Arial"><tspan x="0" y="0">TP</tspan></text>
+  </g>
+</svg>

@@ -18,7 +18,8 @@
 
 		<!--Arquivos de animação-->
 		<link rel="stylesheet" href="css/animate.css">
-
+		
+		<!--Customização do icone da aba + estilo do menu-->
 		 <meta name="theme-color" content="wheat" />
 		 <link rel="icon" href="images/tp_aba.png">
 		
@@ -67,7 +68,8 @@
 					
 				</div>
 			</div>
-			<div id = "header">
+			<!--
+				<div id = "header">
 				<div class="container">
 					<nav>
 						<ul>
@@ -78,6 +80,7 @@
 					</nav>
 				</div>
 			</div>
+			-->
 
 	</section>
 	
@@ -86,21 +89,17 @@
 			Menu Mobile
 		##################
 	-->
-		
-		<div class="icone-hamburguer">
-			<div class="container">
-				<div class="menu-movel">
-					<span id="hamburguer"></span>
-				</div>
-			</div>
-    	</div>
+		<div class="menu-animado">
+				<span id="hamburguer"></span>
+		</div>
 
 		<section class="menu-mobile">
 			<nav>
 				<ul>
-					<li><a href="#home" aria-haspopup = "true"  id="link">Home</a></li>
-					<li><a href="#caracteristicas-servicos" aria-haspopup = "true" id="link">Características</a></li>
-					<li><a href="#planos" aria-haspopup = "true" id="link">Planos</a></li>
+					<li><a href="#home">Home</a></li>
+					<li><a href="#sobre">Quem sou eu?</a></li>
+					<li><a href="#trabalhos">Meus trabalhos</a></li>
+					<li><a href="#recomendacoes">Recomendações</a></li>
 					</ul>
 			</nav>
 		</section>
@@ -234,6 +233,38 @@
 
 						</div>
 					</div>
+
+					<div class="box-mobile">
+						<div class="trabalhos-mobile">
+							<div class="trabalho trabalho-mobile" >
+									<div class="logo-projeto" style="background-image: url('images/projects/tvde.png')"></div>
+									<div class="back-descricao">
+										<p class="title">TVDE System</p>
+										<p class="first-text">Blog desenvolvido para uma empresa de Portugal.</p>
+										<p class="second-text">Desenvolvido na empresa Mangue Tecnologia</p>
+										<i class="ion-ios7-arrow-left"></i><a href="https://tvdesystem.com/" target="_blank">Visitar Site</a><i class="ion-ios7-arrow-right"></i>
+									</div>
+							</div>
+
+							
+							<div class="trabalho trabalho-mobile">
+								<div class="logo-projeto" style="background-image: url('images/projects/logo_colorida.png');"></div>
+								<div class="back-descricao">
+									<p class="title">Federação Junior da Paraíba</p>
+									<p class="first-text">Site desenvolvido no programa de treinamento da empresa junior da UFPE, CITi</p>
+									<p class="second-text">Participei no desenvolvimento do mockup e como desenvolvedora</p>
+									<i class="ion-ios7-arrow-left"></i><a href="https://pbjunior.com.br/" target="_blank">Visitar Site</a><i class="ion-ios7-arrow-right"></i>
+								</div>
+							</div>
+						</div>
+
+						<div class="projetos-behance">
+								<a id="link-behance" href="https://www.behance.net/lytamrp97d7" target="__blank" alt="link para o behance">Lista Completa</a>
+						</div>
+
+					</div>
+
+					
 					
 					<div class="arrows">
 						<div class="arrow">
@@ -361,9 +392,16 @@
 		</a>
 		  -->
 
+		<!--CDN Jquery-->
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+		<!--Slick Plugin -->
 		<script type="text/javascript" src="js/slick.min.js"></script>
+
+		<!--Funções JavaScript-->
 		<script src="js/javascript.js"></script>
+
+		<!--WOW Plugin-->
 		<script src="js/wow.min.js"></script>
 		<script>
 			wow = new WOW(
@@ -377,6 +415,17 @@
 			)
             wow.init();
 		</script>
+
+		<!-- Global site tag (gtag.js) - Google Analytics -->
+		<script async src="https://www.googletagmanager.com/gtag/js?id=UA-136773888-1"></script>
+		<script>
+		window.dataLayer = window.dataLayer || [];
+		function gtag(){dataLayer.push(arguments);}
+		gtag('js', new Date());
+
+		gtag('config', 'UA-136773888-1');
+		</script>
+
 		
 
 	</body>

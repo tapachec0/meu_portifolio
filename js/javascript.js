@@ -1,31 +1,4 @@
 
-/*--------------------------------------------- FIXAR HEADER ON SCROLL ---------------------------------------------*/
-let distanciaTopHeader = $("#header").offset().top; //posição do topo inicial do objeto
-let fixo = false
-/* Função para verificar se a posição do topo da window é maior do que a do objeto.Se sim, o
-cabeçalho fica com posicao fixa e no topo. Caso contrário, o topo da window é menor, então 
-há conteudo acima e volta ao normal*/
-function fixarHeader() {
-	
-	console.log('header',distanciaTopHeader);
-	console.log('window',$(window).scrollTop());
-	console.log('home',$("#home").offset().top);
-	
-	if($(window).scrollTop() >= distanciaTopHeader) {
-		$("#header").addClass("fixed");
-		
-	}
-
-	else {
-		console.log()
-		if($("#header").hasClass('fixed')){
-			$("#header").removeClass("fixed");	
-		}
-		
-		
-	}
-}
-
 /*---------------------------------------------EFEITO DE ESCREVER(HOME) ---------------------------------------------*/
 var indexLetraPalavra = 0;
 var text = document.getElementById('text').innerText;
@@ -47,25 +20,36 @@ function typePalavra() {
 
 /*--------------------------------------------- MENU MOBILE ---------------------------------------------*/
 var ativo = false
-$('.icone-hamburguer').click(function(){
+$('.menu-animado').click(function(){
 	if(ativo === false){
 		$('#hamburguer').addClass('ativo');
+		$('.menu-mobile').css("opacity","1");
+		
+		$('.menu-animado').css("box-shadow","0 0 0 130vw wheat, 0 0 0 130vw wheat");
 		ativo = true
 	}
 	else {
 		$('#hamburguer').removeClass('ativo');
+		
+		$('.menu-animado').css("box-shadow","0 0 0 0 wheat, 0 0 0 0 wheat");
+		$('.menu-mobile').css("opacity","0");
 		ativo = false
 	}
-	$('.menu-mobile').fadeToggle( "slow", "linear" );
+	
 });
 
 $('.menu-mobile a').click(function(){
 	if(ativo === true){
 		$('#hamburguer').removeClass('ativo');
+		$('.menu-animado').css("box-shadow","0 0 0 0 wheat, 0 0 0 0 wheat");
+		$('.menu-mobile').css("opacity","0");
+		
 		ativo = false;
 	}
-	
-	$('.menu-mobile').fadeToggle( "slow", "linear" );
+	else {
+		$('.menu-mobile').css("opacity","1");
+		
+	}
 	
 });
 
@@ -75,13 +59,11 @@ $('.menu-mobile a').click(function(){
 /* Função aprendida no curso de scrollSuave no vídeo gratuito disponibilizado no Youtube pelo
 canal Origamid */
 function scrollSuave(){
-	$('#header nav a').click(function(e){
+	$('.menu-mobile a').click(function(e){
 		e.preventDefault();
 		var secaoId = $(this).attr('href'),
 			distanciaTopSecao = $(secaoId).offset().top,
-			menuHeight = $('#header').innerHeight();
-			console.log(secaoId);
-			console.log(distanciaTopSecao);
+			menuHeight = $('.menu-animado').innerHeight();
 		$('html, body').animate({
 			scrollTop: distanciaTopSecao - menuHeight //como coloca no topo a secao, o menu cobre, por isso subtrai a altura do menu
 		}, 500);
@@ -126,18 +108,18 @@ function slider() {
 		centerMode: true,
 		variableWidth: true,
 		variableHeight: true,
+		infinite: true,
+		
 		responsive: [
 			{
 			  breakpoint: 951,
 			  settings: {
-				arrows: true,
 				centerMode: false,
-				slidesToShow: 2,
-				slidesToScroll: 2,
+				arrows: false,
+				slidesToShow: 1,
+				slidesToScroll: 1,
 				variableWidth: false,
-				variableHeight: false,
-				dots: false,
-				infinite:true,
+				
 				
 	
 			  }
@@ -148,18 +130,6 @@ function slider() {
 }
 
 /*--------------------------------------------- CHAMADA DAS FUNÇÕES ---------------------------------------------*/
-
-//Função que controla o scroll
-window.addEventListener('scroll', function() {
-	fixarHeader();
-	
-});
-
-/*window.addEventListener('resize', function() {
-	distanciaTopHeader =  $(window).scrollTop() -  $("#header").offset().top;
-	console.log(distanciaTopHeader)
-	
-});*/
 
 window.addEventListener("orientationchange", function() {
 	if(window.orientation == 0){

@@ -20,6 +20,8 @@
 @media(max-width: 1024px) {
 	.box-tecnologias { justify-content: center; }
 	.logo-tecnologia { margin-right: 10px; margin-bottom: 10px; }
+	#header { display: none !important; }
+	.menu-animado { display: flex; }
 }
 
 @media(max-width: 980px) {
@@ -28,46 +30,39 @@
 }
 
 @media(max-width: 950px) {
-	#trabalhos .slick-list { 
-		width: 90% !important;
-		padding: 50px 0!important;
-		height: 315px;
-	}
-	#trabalhos .slick-slide { 
-		margin-right: 13px;
-		margin-bottom: 39px;
-		opacity: 0.9;
-		
-	}
 
-	#trabalhos .slick-slide:before {
-		background: rgba(0,0,0,0.7);
-		content: "";
-		position: absolute;
-		width: 100%;
-		height: 100%;
-		top: 0;
-		bottom: 0;
-		opacity: 0;
-		transition: 0.3s all ease-out;
-	}
+	.arrows, #trabalhos .slick-slider { display: none; }
 
-	#trabalhos .slick-slide:hover:before { 
-		opacity: 1;
-	  top: 0px;
-	}
-	
-	#trabalhos .slick-slide:hover .back-descricao { 
-		top: 0;
-		padding: 10px;
-	}
-	.arrows { 
+	/*Mobile de trabalhos(Sem slider)*/
+	#trabalhos .box-mobile { display: block; }
+	.trabalhos-mobile {
+		display: flex;
 		justify-content: center;
-		margin-top: 46px;
 	}
-	.prev { margin-right: 34px; }
 
-	#trabalhos { padding-bottom: 210px; }
+	#sobre { padding-bottom: 40px; }
+	#trabalhos { padding-bottom: 120px; }
+	#recomendacoes { padding-top: 65px; }
+
+	#trabalhos .trabalho {
+		position: relative;
+		background-color: white;
+		-webkit-box-shadow: 0px 1px 11px 0px rgba(0,0,0,0.75);
+		-moz-box-shadow: 0px 1px 11px 0px rgba(0,0,0,0.75);
+		box-shadow: 0px 1px 11px 0px rgba(0,0,0,0.75);
+		outline: none;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		width: 250px;
+		height: 228px;
+		margin-right: 15px;
+	}
+
+	.trabalho .logo-projeto {	z-index: 0 !important; }
+
+	#link-behance { margin-top: 30px; }
+
 }
 
 @media(max-width: 810px) {
@@ -77,11 +72,6 @@
 	 }
 } 
 
-/*@media(max-height: 1280px) and (orientation: portrait) { 
-	#home { height: 57vh; }
-	#home .welcome { margin-left: 11%; margin-top: 23vh; }
-	#home #eu { margin-top: 39vh; }
-}*/
 
 @media(max-width: 768px) {
 	#home .welcome { margin-left: 10%; }
@@ -94,12 +84,21 @@
 	#home #eu { margin-top: 85vh; }
 }
 
+@media(max-width: 590px) {
+	.trabalhos-mobile { 
+		flex-direction: column;
+		align-items: center;
+	}
+
+	#trabalhos .trabalho {
+		margin-right: 0;
+		margin-bottom: 25px;
+	}
+}
 
 
 @media(max-width: 580px) {
 	
-	#header ul { display: none !important; }
-	.icone-hamburguer { display: flex;}
 	#eu .referencia p { font-size: 10pt; }
 	#home .welcome h1 { font-size: 30pt !important; }
 	#sobre .container p { font-size: 18pt; }

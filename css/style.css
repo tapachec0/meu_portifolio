@@ -216,6 +216,8 @@ li { list-style-type: none; }
 
 }
 
+#trabalhos .box-mobile { display: none; }
+
 #trabalhos h1 {
 	text-align: center;
 	color: #424242;
@@ -245,7 +247,9 @@ li { list-style-type: none; }
 	align-items: center;
 }
 
-#trabalhos .logo-projeto{
+
+
+#trabalhos .logo-projeto {
 	width: 80%;
 	height: 80%;
 	position: absolute;
@@ -256,12 +260,13 @@ li { list-style-type: none; }
 	z-index: -1;
 }
 
-#trabalhos .slick-slide img {
+#trabalhos .slick-slide img, .trabalho img {
 	width: 100%;
 	height: 100%;
 	object-fit: contain;
 	object-position: center;
 }
+
 #trabalhos .slick-center {
 	transform: scale(1.2);
 	opacity: 1;
@@ -282,7 +287,7 @@ li { list-style-type: none; }
   transition: top 0.3s, right 0.3s, bottom 0.3s, left 0.3s;
 }
 
-#trabalhos .slick-center:before {
+#trabalhos .slick-center:before, .trabalho-mobile:before {
 	background: rgba(0,0,0,0.7);
 	content: "";
 	position: absolute;
@@ -293,38 +298,39 @@ li { list-style-type: none; }
 	opacity: 0;
 	transition: 0.3s all ease-out;
 }
-#trabalhos .slick-center:hover:before { 
+
+#trabalhos .slick-center:hover:before, .trabalho-mobile:hover:before { 
 	opacity: 1;
   top: 0px;
 }
 
-#trabalhos .slick-center:hover .back-descricao { 
+#trabalhos .slick-center:hover .back-descricao, .trabalho-mobile:hover .back-descricao { 
 	top: 0;
 	padding: 10px;
 }
 
-#trabalhos .trabalhos-secao .trabalho  .back-descricao {
+#trabalhos .trabalhos-secao .trabalho  .back-descricao, .trabalho-mobile .back-descricao {
 	text-align: center;
   color: wheat;
 }
 
-#trabalhos .trabalhos-secao .trabalho .back-descricao .title {
+#trabalhos .trabalhos-secao .trabalho .back-descricao .title, .trabalho-mobile .back-descricao .title {
 	text-align: center;
 	font-size: 15pt;
 	margin-bottom: 30px;
 	font-weight: bold;
 }
 
-#trabalhos .trabalhos-secao .trabalho .back-descricao .first-text {
+#trabalhos .trabalhos-secao .trabalho .back-descricao .first-text, .trabalho-mobile .back-descricao .first-text {
 	margin-bottom: 10px;
 	
 }
-#trabalhos .trabalhos-secao .trabalho .back-descricao  a {
+#trabalhos .trabalhos-secao .trabalho .back-descricao  a, .trabalho-mobile .back-descricao a {
 	color: wheat;
 	
 	font-weight: bold;
 }
-#trabalhos .trabalhos-secao .trabalho .back-descricao .second-text {
+#trabalhos .trabalhos-secao .trabalho .back-descricao .second-text, .trabalho-mobile .back-descricao .second-text {
 	margin-bottom: 10px;
 }
 
@@ -352,6 +358,23 @@ li { list-style-type: none; }
   width: 35px;
   height: 35px;
 }
+
+.projetos-behance {
+	width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#link-behance {
+	background: #424242;
+	color: wheat;
+	padding: 14px;
+	width: 213px;
+	text-align: center;
+	margin-top: 43px;
+}
+
+
 
 
 /*------------------------------------*\
@@ -507,110 +530,48 @@ footer .container {
 /*------------------------------------*\
   #MOBILE NAV
 \*------------------------------------*/
-#header .menu-movel {
-  display: none;
-  width: 37px;
-}
 
-
-
-.menu-mobile {
-    background: white;
-    height: 100vh;
-    display: none;
-    position: fixed;
-    width: 100%;
-    z-index: 9;
-    overflow: scroll;
-}
-.menu-mobile nav {
-    width: 100%;
-}
-
-.menu-mobile nav ul {
-    display: flex;
-    flex-direction: column;
-    text-align: center;
-    padding: 0;
-    margin-top: 91px;
-}
-
-.menu-mobile nav ul li { 
-    margin-bottom: 40px;
-    width: 100%;
-    display: flex;
-    justify-content: center;
-}
-
-.menu-mobile nav ul li:last-child a {
-    margin-right: 0;
-    border-radius: 3px 3px 3px 3px;
-    -moz-border-radius: 3px 3px 3px 3px;
-    -webkit-box-shadow: 0px 1px 17px -6px rgba(0,0,0,0.75);
-    -moz-box-shadow: 0px 1px 17px -6px rgba(0,0,0,0.75);
-    box-shadow: 0px 1px 17px -6px rgba(0,0,0,0.75);
-    border: 2px solid wheat;
-    width: 115px;
-    padding: 7px;
-    display: flex;
-    justify-content: center;
-    text-transform: uppercase;
-    align-items: center;
-    font-size: 13pt;
-    margin-bottom: 25px;
-}
-
-.menu-mobile nav ul li a { 
-    font-size: 16pt;
-    color: var(--azul);
-    font-weight: 500;
-}
-
-.menu-movel {
+.menu-animado {
+	background: wheat;
+	border-radius: 50%;
+	width: 40px;
+	height: 40px;
+	top: 10px;
+	right: 20px;
+	position: fixed;
+	z-index: 1;
 	display: flex;
-	justify-content: flex-end;
-	width: 100%;
-	height: 100%;
-	margin-top: 28px;
+	justify-content: center;
+	align-items: center;
+	box-shadow: 0 0 0 0 #FFF, 0 0 0 0 #FFF;
+	transition: box-shadow 1.1s cubic-bezier(.19,1,.22,1);
+
 }
 
-.icone-hamburguer {
-	width: 100%;
-  height: 50px;
-  justify-content: flex-end;
-  display: none;
-  margin-top: -21px;
-}
-
-.icone-hamburguer .container {
-	justify-content: flex-end;
-	height: 100%;
-}
-
-
-.icone-hamburguer #hamburguer {
+#hamburguer {
 	display: block;
-	width: 30px;
+	width: 23px;
 	height: 2px;
 	position: relative;
-	background: wheat;
+	background: #424242;
 	transition: .5s ease-out;
+
 }
 
-.icone-hamburguer #hamburguer:before, 
-.icone-hamburguer #hamburguer:after {
+#hamburguer:before, 
+#hamburguer:after {
 	position: absolute;
 	display: block;
 	content: "";
-	background: wheat;
+	background: #424242;
 	width: 100%;
 	height: 100%;
 	transition: .5s ease-out;
 }
 
-.icone-hamburguer #hamburguer:before { top: -10px; }
+#hamburguer:before { top: -8px; }
 
-.icone-hamburguer #hamburguer:after { bottom: -10px; }
+#hamburguer:after { bottom: -8px; }
 
 .ativo {
 	transform: rotate(45deg);
@@ -626,4 +587,40 @@ footer .container {
 	transform: rotate(90deg);
 }
 
-.icone-hamburguer input { display: block; }
+.menu-mobile {
+	position: fixed;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	list-style: none;
+	font-size: 45px;
+	opacity: 0;
+	transition: .25s .1s cubic-bezier(0, 1.07, 0, 1.02);
+	z-index: 2;
+	height: 100%;
+}
+
+.menu-mobile nav {
+	width: 100%;
+}
+
+.menu-mobile nav ul {
+	display: flex;
+	flex-direction: column;
+	text-align: center;
+	padding: 0;
+	margin-top: 91px;
+}
+
+.menu-mobile nav ul li { 
+	margin-bottom: 40px;
+	width: 100%;
+	display: flex;
+	justify-content: center;
+}
+
+.menu-mobile nav ul li a { 
+	font-size: 16pt;
+	color: #424242;
+	font-weight: 500;
+}
